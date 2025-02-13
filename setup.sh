@@ -17,7 +17,7 @@ mkdir ~/.config/bspwm
 mkdir ~/.config/sxhkd
 mkdir ~/.bin
 
-cd things_that_need_moving
+cd ~/post-install/things_that_need_moving
 mv .bashrc ~
 mv .xinitrc ~
 mv bspwmrc ~/.config/bspwm
