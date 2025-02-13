@@ -2,7 +2,7 @@
 
 # install things
 sudo pacman -Syu
-sudo pacman -S $(cat packages) --noconfirm
+sudo pacman -S $(cat packages.txt) --noconfirm
 
 xdg-user-dirs-update
 
