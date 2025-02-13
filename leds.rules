@@ -1,0 +1,2 @@
+RUN+="/bin/chgrp wheel /sys/class/leds/platform::micmute/brightness"
+RUN+="/bin/chmod g+w /sys/class/leds/platform::micmute/brightness"

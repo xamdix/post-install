@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+
+if [[ "$(wpctl get-volume @DEFAULT_AUDIO_SOURCE@)" == *"MUTED"* ]]; then
+	xbacklight -ctrl platform::micmute -set 100
+else
+	xbacklight -ctrl platform::micmute -set 0
+fi
