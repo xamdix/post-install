@@ -7,7 +7,9 @@ sudo pacman -S $(cat packages) --noconfirm
 xdg-user-dirs-update
 
 git clone https://aur.archlinux.org/yay.git
+cd yay
 makepkg -si yay --noconfirm
+cd ~
 rm -rf yay
 
 # move packages to the right places
@@ -24,3 +26,7 @@ sudo mv backlight.rules /etc/udev/rules.d
 sudo mv leds.rules /etc/udev/rules.d
 mv micmute ~/.bin
 cd ~
+
+# make scripts executable
+chmod +x ~/.config/bspwm/bspwmrc
+chmod +x ~/.bin/micmute
