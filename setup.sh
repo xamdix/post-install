@@ -23,3 +23,4 @@ mv sxhkdrc ~/.config/sxhkd
 sudo mv backlight.rules /etc/udev/rules.d
 sudo mv leds.rules /etc/udev/rules.d
 mv micmute ~/.bin
+cd ~
