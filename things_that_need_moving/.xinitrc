@@ -1,17 +1,5 @@
 #!/bin/sh
 
-xrdb=xrdb
-xinitdir=/etc/X11/xinit
-xclock=xclock
-xterm=xterm
-twm=twm
-xmodmap=xmodmap
-
-userresources=$HOME/.Xresources
-usermodmap=$HOME/.Xmodmap
-sysresources=$xinitdir/.Xresources
-sysmodmap=$xinitdir/.Xmodmap
-
 # merge in defaults and keymaps
 
 if [ -f $sysresources ]; then
@@ -47,8 +35,11 @@ if [ -d $xinitdir/xinitrc.d ] ; then
  unset f
 fi
 
-$twm &
-$xclock -geometry 50x50-1+1 &
-$xterm -geometry 80x50+494+51 &
-$xterm -geometry 80x20+494-0 &
-exec $xterm -geometry 80x66+0+0 -name login
+session=${1:-bspwm}
+
+case $session in
+    lxqt              ) exec startlxqt;;
+    xfce              ) exec startxfce4;;
+    # No known session, try to run it as command
+    *                 ) exec $1;;
+esac
