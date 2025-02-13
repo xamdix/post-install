@@ -1,0 +1,15 @@
+acpilight
+alacritty
+bspwm
+firefox
+htop
+pipewire
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+rofi
+sxhkd
+wireplumber
+xdg-user-dirs
+xorg-server
+xorg-xinit
